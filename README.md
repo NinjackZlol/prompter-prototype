@@ -7,7 +7,7 @@ This repository contains experimental approaches for detecting **pain points**, 
 Install dependencies
 
 **bash**
-`pip install torch transformers scikit-learn sentence-transformers`
+`pip install transformers sentence-transformers scikit-learn datasets torch transformers[torch]`
 
 
 ## How to run
