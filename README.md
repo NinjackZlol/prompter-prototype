@@ -23,3 +23,6 @@ Embedding-Based Classification
 DistillBERT Fine Tuning
 
 `python lw-bert.py`
+
+##Documentation
+Research Doc https://docs.google.com/document/d/10EdMDjwxjT-GTeV57Qpq41_AW2BR8tp6xo8NeaiZjGc/edit?usp=sharing
