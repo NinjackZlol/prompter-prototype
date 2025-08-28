@@ -4,7 +4,6 @@ import torch
 from torch.utils.data import Dataset
 import json
 
-# Load dataset
 with open("test-data.json", "r") as f:
     data = json.load(f)
 
@@ -27,17 +26,17 @@ for entry in data:
         lbl[4] = 1
     labels.append(lbl)
 
-# Split dataset before tokenization
+# split dataset before tokenization
 train_texts, test_texts, train_labels, test_labels = train_test_split(
     texts, labels, test_size=0.25, random_state=42
 )
 
-# Tokenize
+# tokenize
 tokenizer = DistilBertTokenizerFast.from_pretrained('distilbert-base-uncased')
 train_encodings = tokenizer(train_texts, truncation=True, padding=True)
 test_encodings = tokenizer(test_texts, truncation=True, padding=True)
 
-# Dataset class
+# dataset object
 class TranscriptDataset(Dataset):
     def __init__(self, encodings, labels):
         self.encodings = encodings
@@ -49,14 +48,13 @@ class TranscriptDataset(Dataset):
         item['labels'] = torch.tensor(self.labels[idx], dtype=torch.float)
         return item
 
-# Create dataset objects
+# dataset instantiation
 train_dataset = TranscriptDataset(train_encodings, train_labels)
 test_dataset = TranscriptDataset(test_encodings, test_labels)
 
-# Load model
 model = DistilBertForSequenceClassification.from_pretrained('distilbert-base-uncased', num_labels=5)
 
-# Training arguments
+# trainig args
 training_args = TrainingArguments(
     output_dir='./results',
     num_train_epochs=3,
@@ -64,7 +62,6 @@ training_args = TrainingArguments(
     logging_steps=5
 )
 
-# Trainer
 trainer = Trainer(
     model=model,
     args=training_args,
@@ -72,10 +69,8 @@ trainer = Trainer(
     eval_dataset=test_dataset
 )
 
-# Start training
 trainer.train()
 
-# Evaluate on test set
 predictions = trainer.predict(test_dataset)
 pred_labels = (predictions.predictions > 0.5).astype(int)  # Threshold for multi-label
 print("Predicted labels:\n", pred_labels)
