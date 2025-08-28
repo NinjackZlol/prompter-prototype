@@ -1,0 +1,154 @@
+[
+  {
+    "words": [
+      {
+        "text": "I need a CRM because our current one crashes all the time.",
+        "start_timestamp": 0.0,
+        "end_timestamp": 4.5,
+        "language": "en-us",
+        "confidence": 0.95
+      }
+    ],
+    "speaker": "Customer A",
+    "speaker_id": 100,
+    "language": "en-us",
+    "labels": {
+      "pain": "Current CRM crashes frequently",
+      "need": "New CRM",
+      "depth": "medium"
+    }
+  },
+  {
+    "words": [
+      {
+        "text": "I want better reporting tools because leadership keeps asking for numbers I can't get.",
+        "start_timestamp": 5.0,
+        "end_timestamp": 9.8,
+        "language": "en-us",
+        "confidence": 0.92
+      }
+    ],
+    "speaker": "Customer B",
+    "speaker_id": 101,
+    "language": "en-us",
+    "labels": {
+      "pain": "Lack of proper reporting",
+      "need": "Advanced reporting tools",
+      "depth": "high"
+    }
+  },
+  {
+    "words": [
+      {
+        "text": "I need help with onboarding because our current process takes too long.",
+        "start_timestamp": 10.0,
+        "end_timestamp": 13.2,
+        "language": "en-us",
+        "confidence": 0.96
+      }
+    ],
+    "speaker": "Customer C",
+    "speaker_id": 102,
+    "language": "en-us",
+    "labels": {
+      "pain": "Onboarding process too slow",
+      "need": "Faster onboarding solution",
+      "depth": "medium"
+    }
+  },
+  {
+    "words": [
+      {
+        "text": "We\u2019re losing deals because our product demos don\u2019t look professional.",
+        "start_timestamp": 14.0,
+        "end_timestamp": 17.5,
+        "language": "en-us",
+        "confidence": 0.91
+      }
+    ],
+    "speaker": "Customer D",
+    "speaker_id": 103,
+    "language": "en-us",
+    "labels": {
+      "pain": "Unprofessional product demos",
+      "need": "Demo software",
+      "depth": "high"
+    }
+  },
+  {
+    "words": [
+      {
+        "text": "I need a sales coach because I don't have the time to coach my team.",
+        "start_timestamp": 18.0,
+        "end_timestamp": 21.0,
+        "language": "en-us",
+        "confidence": 0.93
+      }
+    ],
+    "speaker": "Customer E",
+    "speaker_id": 104,
+    "language": "en-us",
+    "labels": {
+      "pain": "No time to coach team",
+      "need": "Sales coach",
+      "depth": "low"
+    }
+  },
+  {
+    "words": [
+      {
+        "text": "Our integrations break every time there\u2019s an update, it\u2019s slowing down projects.",
+        "start_timestamp": 22.0,
+        "end_timestamp": 25.0,
+        "language": "en-us",
+        "confidence": 0.9
+      }
+    ],
+    "speaker": "Customer F",
+    "speaker_id": 105,
+    "language": "en-us",
+    "labels": {
+      "pain": "Integrations break after updates",
+      "need": "Stable integration support",
+      "depth": "high"
+    }
+  },
+  {
+    "words": [
+      {
+        "text": "We need better analytics because the current dashboard only shows basic data.",
+        "start_timestamp": 26.0,
+        "end_timestamp": 29.0,
+        "language": "en-us",
+        "confidence": 0.94
+      }
+    ],
+    "speaker": "Customer G",
+    "speaker_id": 106,
+    "language": "en-us",
+    "labels": {
+      "pain": "Limited analytics in dashboard",
+      "need": "Advanced analytics",
+      "depth": "medium"
+    }
+  },
+  {
+    "words": [
+      {
+        "text": "I need automated reminders because I keep missing follow-ups with prospects.",
+        "start_timestamp": 30.0,
+        "end_timestamp": 33.0,
+        "language": "en-us",
+        "confidence": 0.95
+      }
+    ],
+    "speaker": "Customer H",
+    "speaker_id": 107,
+    "language": "en-us",
+    "labels": {
+      "pain": "Missed follow-ups",
+      "need": "Automated reminders",
+      "depth": "low"
+    }
+  }
+]
